@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="cat" class="com.adsh.pojo.Cat"/>
+<!--    <bean id="dog" class="com.adsh.pojo.Dog"/>-->
+<!--    <bean id="dog11" class="com.adsh.pojo.Dog"/>-->
+    <bean id="dog" class="com.adsh.pojo.Dog"/>
+<!--
+byName ：会自动在容器上下文中查找，和自己对象set方法后面的值对应的beanid，需要bean的id唯一！
+byType ：会自动在容器上下文中查找，和自己对象set对象相同属性的bean，需要bean的class唯一！
+-->
+    <bean id="people" class="com.adsh.pojo.People" autowire="byType">
+        <property name="name" value="adsh"/>
+        <!--        <property name="cat" ref="cat"/>-->
+        <!--        <property name="dog" ref="dog"/>-->
+    </bean>
+</beans>

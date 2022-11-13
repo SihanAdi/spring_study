@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="com.adsh.pojo.User">
+<!--        有参构造器-->
+<!--        <constructor-arg index="0" value="adsh"/>-->
+<!--        通过类型创建，不建议使用-->
+<!--        <constructor-arg type="java.lang.String" value="Adisihan"/>-->
+<!--        直接通过参数名-->
+        <constructor-arg name="name" value="ad"/>
+    </bean>
+<!--
+id ： bean 的唯一标识符，也就是相当于我们学的对象名
+class：bean 对象所对应的全限定名：包名＋类名
+name：也是别名，而且name 可以同时取多个别名
+-->
+    <bean id="userT" class="com.adsh.pojo.UserT" name="t userT2,userT3;userT4"/>
+<!--    别名，如果有别名，那么可以通过原本的对象或别名获得对象-->
+    <alias name="user" alias="userNew"/>
+
+</beans>
